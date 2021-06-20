@@ -6,23 +6,16 @@
         <field name="inherit_id" ref="stock.view_picking_form"/>
         <field name="priority">1001</field>
         <field name="arch" type="xml">
-            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[3]/field[@name='move_ids_without_package']/tree[1]/field[@name='product_id']"
+            <!--            <field name="picking_type_id" position="after">-->
+            <!--                <field name="pcs_per_cartoon"/>-->
+            <!--            </field>-->
+            <!--            <xpath expr="//field[@name='move_ids_without_package']/tree/field[@name='quantity_done']" position="after">-->
+            <!--                <field name="pcs_per_cartoon"/>-->
+            <!--            </xpath>-->
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[3]/field[@name='move_ids_without_package']/tree[1]/field[@name='quantity_done']"
                    position="after">
                 <field name="pcs_per_cartoon"/>
             </xpath>
         </field>
-
-    </record>
-    <record id="view_move_form_inherited" model="ir.ui.view">
-        <field name="name">view.move.form.inherited</field>
-        <field name="model">stock.move</field>
-        <field name="inherit_id" ref="stock.stock_move_form"/>
-        <field name="priority">1001</field>
-        <field name="arch" type="xml">
-            <field name="product_tmpl_id" position="after">
-                     <field name="pcs_per_cartoon"/>
-            </field>
-        </field>
-
     </record>
 </odoo>
