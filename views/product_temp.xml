@@ -8,6 +8,6 @@
             <xpath expr="//field[@name='barcode'] " position="after">
                 <field name="pcs_per_cartoon"/>
             </xpath>
-        </field>
+        </field>zz
     </record>
 </odoo>
